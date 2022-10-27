@@ -10,7 +10,7 @@ import { auth } from '../firebaseConfig';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import {useTheme} from '../Context/ThemeContext';
-// import GoogleButton from 'react-google-button';
+import GoogleButton from 'react-google-button';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useAlert } from '../Context/AlertContext';
 
@@ -141,9 +141,10 @@ const AccountIcon = () => {
                             
                     <Box className={classes.box}>
                         <span>OR</span>
-                        {/* <GoogleButton
+                        <GoogleButton
                         style={{width:'100%',marginTop:'1rem'}}
-                        onClick = {signInWithGoogle}/> */}
+                        onClick = {signInWithGoogle}
+                        />
                     </Box>
 
                 </div>

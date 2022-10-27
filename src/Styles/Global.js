@@ -61,8 +61,12 @@ body{
   }
   .heading{
     font-family: Inter;
-    color:#f4fffd;
+   
     text-align:center;
+}
+
+.logo{
+  color: ${ ({theme}) => theme.title};
 }
 
 .char.correct{

@@ -32,7 +32,7 @@ const Footer = () => {
 
         <div className="actual-footer">
             <div className="footer-links" >
-                <a href='https://github.com/VirajNawar/typing-test-app' target="_blank">
+                <a href='https://github.com/VirajNawar/typing-test-app' target="_blank" >
                     <GitHubIcon />
                 </a>
             </div>   
