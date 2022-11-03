@@ -4,6 +4,7 @@ import Graph from './Graph'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import { useAlert } from '../Context/AlertContext';
+import { Tooltip } from '@mui/material';
 
 const Stats = ({wpm, accuracy, correctChars, incorrectChars, extraChars, missedChars, graphData, reset}) => {
 
@@ -11,7 +12,7 @@ const Stats = ({wpm, accuracy, correctChars, incorrectChars, extraChars, missedC
 
     const {setAlert} = useAlert();
 
-    const newGraph = graphData.filter((i)=> {
+    const newGraph = graphData.filter((i) => {
         if(! timeSet.has(i[0])){
             timeSet.add(i[0]);
             return i;
@@ -21,7 +22,6 @@ const Stats = ({wpm, accuracy, correctChars, incorrectChars, extraChars, missedC
     const pushStatsToDb = async()=>{
         const resultsRef = db.collection('results');
         const {uid} = auth.currentUser
-       
         if(!isNaN(accuracy)){
             await resultsRef.add({
                 userId: uid,
@@ -68,6 +68,10 @@ const Stats = ({wpm, accuracy, correctChars, incorrectChars, extraChars, missedC
                     <div className="subtitle">{wpm}</div>
                     <div className="title">Accuracy</div>
                     <div className="subtitle">{accuracy}</div>
+                    
+                    <div className="title">Characters</div>
+                    <div className="subtitle">{correctChars}/{incorrectChars}/{extraChars}/{missedChars}</div>
+                   
                     <div className="title">Characters</div>
                     <div className="subtitle">{correctChars}/{incorrectChars}/{extraChars}/{missedChars}</div>
                 </div>

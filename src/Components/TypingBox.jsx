@@ -296,6 +296,8 @@ const TypingBox = (props) => {
     }
 
     
+
+   
     const focusInput = ()=>{
         textInputRef.current.focus();
     }
@@ -319,7 +321,7 @@ const TypingBox = (props) => {
             <UpperMenu countDown={countDown}/>
 
           {!testOver ? (<div className="type-box" onClick={focusInput}>
-              <div className="words">
+              <div className="words" >
 
                   {words.map((word, index) => (
                       <span className="word" ref={wordSpanRef[index]}>

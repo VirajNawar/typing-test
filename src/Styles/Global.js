@@ -189,14 +189,7 @@ body{
   opacity: 0;
 }
 
-.hint{
-  kbd{
-      background-color: ${ ({theme})=> theme.title };
-      color: ${ ({theme})=> theme.background };
-      padding: 2.5px 5px;
-      border-radius: 3px;
-  }
-}
+
 
 .header{
   display: flex;
@@ -204,7 +197,7 @@ body{
   height: 60px;
   align-items:center;
   justify-content: space-between;
-  background: ${ ({theme}) => theme.upperBg};
+  // background: ${ ({theme}) => theme.upperBg};
 }
 .footer{
   display: flex;
@@ -277,6 +270,11 @@ body{
   padding:1rem;
   border-right: 2px solid
 }
+
+.user-profile{
+  font-family:'Inter';
+  font-size: 10px;
+}
 .result-graph, .table{
   width:1000px;
   margin:auto;
@@ -321,6 +319,10 @@ a{
 
 .instruction{
   color: ${ ({theme})=> theme.title };
+}
+
+.blur{
+
 }
 `
 export default GlobalStyles;

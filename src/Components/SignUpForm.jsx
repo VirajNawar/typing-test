@@ -96,6 +96,8 @@ const SignUpForm = ({handleClose}) => {
         display:"flex",
         flexDirection:"column",
         gap:"20px",
+        backgroundColor:theme.upperBg
+
      }}>
         <TextField
         variant="outlined"
@@ -103,11 +105,11 @@ const SignUpForm = ({handleClose}) => {
         label="Enter email"
         InputLabelProps={{
             style: {
-                color: theme.title
+                color: theme.typeBoxText,
             } }}
         InputProps={{
             style:{
-                color: theme.title,
+                color: theme.hoverBg,
             }
         }
         }
@@ -120,11 +122,11 @@ const SignUpForm = ({handleClose}) => {
         label="Enter Password"
         InputLabelProps={{
             style: {
-                color: theme.title
+                color: theme.typeBoxText,
             } }}
         InputProps={{
             style:{
-                color: theme.title,
+                color: theme.hoverBg,
             }
         }
         }
@@ -137,11 +139,11 @@ const SignUpForm = ({handleClose}) => {
         label="Confirm Password"
         InputLabelProps={{
             style: {
-                color: theme.title
+                color: theme.typeBoxText
             } }}
         InputProps={{
             style:{
-                color: theme.title,
+                color: theme.hoverBg,
             }
         }
         }

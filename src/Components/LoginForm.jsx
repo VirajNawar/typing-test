@@ -80,7 +80,7 @@ const LoginForm = ({handleClose}) => {
         display:"flex",
         flexDirection:"column",
         gap:"20px",
-        backgroundColor:"transparent"
+        backgroundColor:theme.upperBg
      }}>
         <TextField
         variant="outlined"
@@ -88,11 +88,11 @@ const LoginForm = ({handleClose}) => {
         label="Enter email"
         InputLabelProps={{
             style: {
-                color: theme.title
+                color: theme.typeBoxText
             } }}
         InputProps={{
             style:{
-                color: theme.title,
+                color: theme.hoverBg
             }
         }
         }
@@ -106,11 +106,11 @@ const LoginForm = ({handleClose}) => {
         label="Enter Password"
         InputLabelProps={{
             style: {
-                color: theme.title
+                color: theme.typeBoxText
             } }}
         InputProps={{
             style:{
-                color: theme.title,
+                color: theme.hoverBg,
             }
         }
         }

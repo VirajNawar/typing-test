@@ -16,6 +16,7 @@ const UserPage = () => {
   const [dataLoading, setDataLoading] = useState(true);
   const {theme} = useTheme();
   const [joinedAt, setJoinedAt] = useState();
+
   const fetchUserData = () => {
 
     if (!loading) {
@@ -40,7 +41,7 @@ const UserPage = () => {
 
   useEffect(() => {
     fetchUserData();
-  }, [loading]);
+  },[loading]);
 
   if (loading || dataLoading) {
     return (
@@ -123,7 +124,6 @@ const UserPage = () => {
                   })}
 
                 </TableBody>
-
 
               </Table>
             </TableContainer>
