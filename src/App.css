@@ -1,13 +1,5 @@
-.current{
-    border-left: 1px solid;
-    animation: blinking 2s infinite;
-    animation-timing-function: ease;
-    @keyframes blinking{
-       
-      0% {border-right-color:${ ({theme}) => theme.background};}
-      25% {border-right-color:${ ({theme}) => theme.title};}
-      50% {border-right-color:${ ({theme}) => theme.background};}
-      75% {border-right-color:${ ({theme}) => theme.title};}
-      100% {border-right-color:${ ({theme}) => theme.background};}
-  }
-}
+
+/* .footer-links a{
+
+  color: white;
+} */

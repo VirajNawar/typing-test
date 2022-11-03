@@ -41,11 +41,14 @@ body{
     margin-left: auto;
     margin-right: auto;
     position: relative;
-   
+    padding: 8px;
+    border-radius: 15px;
+    background-color: ${ ({theme}) => theme.upperBg};
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 
   .words{
-    font-size: 28px;
+    font-size: 24px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -61,7 +64,6 @@ body{
   }
   .heading{
     font-family: Inter;
-   
     text-align:center;
 }
 
@@ -105,22 +107,57 @@ body{
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  // padding-left:0.5rem;
+  margin-bottom:20px;
   justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
   padding:1rem;
   color: ${ ({theme}) => theme.typeBoxText};
+  background-color: ${ ({theme}) => theme.upperBg};
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.time-mode{
+
+.modes{
+  background-color: ${ ({theme}) => theme.modesBg};
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+.time-mode,
+.word-mode{
   display: flex;
+  column-gap:10px;
 }
 .time{
   font-size: 20px;
   margin-right: 15px;
 }
-.time:hover{
-  color:${ ({theme}) => theme.title};
+
+#time:hover,
+#words:hover{
+   background-color: ${ ({theme}) => theme.hoverBg}; 
+   color: ${ ({theme}) => theme.hoverColor}; 
+  padding: 3px ;
+
+}
+
+.no-of-words{
+  font-size: 20px;
+  margin-right: 15px;
+}
+.time:hover,
+.no-of-words:hover{
+  color:${ ({theme}) => theme.hoverColor};
   cursor:pointer;
 }
+
+.heading-words,
+.heading-time{
+  font-family: Inter;
+  font-size: 20px;
+    text-align:center;
+}
+
 .counter{
   font-size: 20px;
 }
@@ -151,13 +188,23 @@ body{
 .hidden-input{
   opacity: 0;
 }
+
+.hint{
+  kbd{
+      background-color: ${ ({theme})=> theme.title };
+      color: ${ ({theme})=> theme.background };
+      padding: 2.5px 5px;
+      border-radius: 3px;
+  }
+}
+
 .header{
   display: flex;
-  width: 1000px;
+  width: 100%;
   height: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-between
+  align-items:center;
+  justify-content: space-between;
+  background: ${ ({theme}) => theme.upperBg};
 }
 .footer{
   display: flex;
@@ -165,16 +212,115 @@ body{
   height: 60px;
   margin-left: auto;
   margin-right: auto;
-  justify-content: space-between
+  justify-content: space-between;
+  align-items: center;
 }
+
+.actual-footer{
+  display: flex;
+ column-gap: 100px;
+ align-items: center;
+}
+
+.tab{
+  background-color: ${ ({theme}) => theme.upperBg};
+  padding: 5px 10px;
+  border-radius: 5px ;
+  color: ${ ({theme}) => theme.typeBoxText};
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
 .theme-options{
-  background:${ ({theme}) => theme.background};
+
+  background:transparent;
   min-width: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .select{
  color: ${ ({theme}) => theme.color};
   min-width: 90px;
 }
 
+.footer-links a{
+  color: black;
+}
+
+.footer-links a:hover{
+  color: ${ ({theme}) => theme.linkHover};
+}
+
+.reset-btn{
+  display:block;
+  margin:auto;
+  transform: scale(1.5);
+  
+}
+.reset-btn:hover{
+  cursor:pointer;
+  transform: scale(1.5);
+}
+.user-profile{
+  width:1000px;
+  margin:auto;
+  display:flex;
+  min-height:15rem;
+  // background:  ${ ({theme})=> theme.typeBoxText };
+  border-radius: 30px;
+}
+.user{
+  display:flex;
+  width:50%;
+  justify-content:center;
+  margin-top:30px;
+  margin-bottom:30px;
+  padding:1rem;
+  border-right: 2px solid
+}
+.result-graph, .table{
+  width:1000px;
+  margin:auto;
+}
+.picture{
+  position:relative;
+  width:50%;
+  min-height:5rem;
+  min-width:5rem;
+}
+.info{
+  width:50%;
+  margin-top:1rem;
+  text-align:center;
+  padding:1rem;
+  font-size:1.5rem;
+}
+.central-data{
+  width:1000px;
+  margin: auto;
+  margin-top:2rem;
+  margin-bottom: 3rem;
+}
+.total-times{
+  width:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:3rem;
+}
+.central-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+a{ 
+  color: inherit; 
+  text-decoration: none;
+} 
+
+.instruction{
+  color: ${ ({theme})=> theme.title };
+}
 `
 export default GlobalStyles;

@@ -11,7 +11,7 @@ function  Header() {
     return (
     <div className='header'>
        <div className="logo">
-        logo
+        
        </div>
 
         <div className="icons">

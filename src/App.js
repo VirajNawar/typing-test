@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
 import AlertSnackbar from './Components/Alert';
-// import { auth } from './firebaseConfig';
 import HomePage from './Pages/HomePage';
 import UserPage from './Pages/UserPage';
 import  GlobalStyles  from './Styles/Global';

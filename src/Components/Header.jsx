@@ -19,9 +19,6 @@ function  Header() {
         </ Link>
         <div className="icons">
             <AccountIcon />
-
-
-    
         </div>
         </div>
   )

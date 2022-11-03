@@ -8,7 +8,7 @@ import UpperMenu from './UpperMenu';
 var randomWords = require('random-words');
 
 const TypingBox = (props) => {
-    console.log(props);
+    
 
     const {gameTime, gameWords, gameMode} = useGameMode();
     const [currWordIndex, setCurrWordIndex] = useState(0);
@@ -25,7 +25,7 @@ const TypingBox = (props) => {
     const [graphData, setGraphData] = useState([]);
     const [openDialog, setOpenDialog] = useState(false);
     const [wordsArray, setWordsArray] = useState(()=>{
-        if(gameMode==='words'){
+        if(gameMode ==='words'){
             return randomWords(gameWords);
         }
         return randomWords(50);
@@ -79,14 +79,13 @@ const TypingBox = (props) => {
     }
 
     const resetGame = ()=>{
-        console.log("loop");
         setCurrCharIndex(0);
         setCurrWordIndex(0);
         setCountDown(gameTime);
         setTestStart(false);
         setTestOver(false);
         clearInterval(intervalId);
-        if(gameMode==='words'){
+        if(gameMode ==='words'){
             let random = randomWords(Number(gameWords));
             setWordsArray(random);
             setCountDown(180);
@@ -106,7 +105,6 @@ const TypingBox = (props) => {
 
     useEffect(()=>{
         resetGame();
-        console.log("running");
     },[gameTime,gameMode,gameWords]);
 
    
@@ -118,13 +116,10 @@ const TypingBox = (props) => {
         const intervalId = setInterval(timer, 1000);
         setIntervalId(intervalId);
         function timer(){
-            console.log("works");
+        
             setCountDown((prevCountDown)=>{
-                console.log("prevcount", prevCountDown);
                 setCorrectChar((correctChar)=>{
-                    console.log("correctchar",correctChar);
                     setGraphData((data)=>{
-                        
                         const startTime = (gameMode==='words')?180:gameTime
                         return [...data,[startTime-prevCountDown,Math.round((correctChar/5)/((startTime-prevCountDown+1)/60))]];
                     })
@@ -306,18 +301,14 @@ const TypingBox = (props) => {
     }
 
     useEffect(()=>{
-        focusInput();
-
+        focusInput(); 
         return ()=>{
             clearInterval(intervalId);
         }
     },[]);
 
     useEffect(()=>{
-        
-
-        resetWordSpanRef();
-        
+        resetWordSpanRef();   
     },[wordSpanRef]);
 
 
