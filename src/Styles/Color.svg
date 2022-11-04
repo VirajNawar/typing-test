@@ -1,21 +1,4 @@
-
-import React, { useState } from 'react'
-import AccountIcon from './AccountIcon'
-import { Modal } from '@mui/material'
-import { Link, useNavigate } from 'react-router-dom'
- 
-
-
-function  Header() {
-
-    
-    const navigate = useNavigate();
-
-    return (
-    <div className='header'>
-        <Link to='/'>
-       <div className="logo" style={{cursor:'pointer', fontSize:'2rem'}}>
-       <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_45_109)">
 <g clip-path="url(#clip0_45_109)">
 <path d="M4.57544 27.9998H14.0686C18.5701 27.9998 22.2193 24.3506 22.2193 19.8491H12.7261C8.22463 19.8491 4.57544 23.4983 4.57544 27.9998Z" fill="#F22BB2"/>
@@ -40,14 +23,3 @@ function  Header() {
 </clipPath>
 </defs>
 </svg>
-       TypIt
-       </div>
-        </ Link>
-        <div className="icons">
-            <AccountIcon />
-        </div>
-        </div>
-  )
-}
-
-export default  Header

@@ -10,21 +10,15 @@ const Footer = () => {
 
     const {setTheme,theme,defaultTheme} = useTheme();
     
-    const handleChange = ()=>{
-
-    }
     const handleThemeChange = (e)=>{
-        console.log("works");
-        console.log(e.value);
         localStorage.setItem('theme',JSON.stringify(e.value));
         setTheme(e.value);
     }
     
-    console.log(themeOptions)
   return (
     <div className='footer'>
 
-        <div className="intructions">
+        <div className="instructions">
             <div className="hint">
                 Press <kbd className='tab'>Tab</kbd> To Open Commands
             </div>

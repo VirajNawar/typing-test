@@ -14,7 +14,7 @@ const CapsLockWarning = ({open}) => {
         }}>
             <Slide in={open}>
                 <Alert severity='warning'>
-                    Caps Locked
+                    Caps Locked On
                 </Alert>
             </Slide>
         </Snackbar>

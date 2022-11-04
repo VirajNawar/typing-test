@@ -69,6 +69,11 @@ body{
 
 .logo{
   color: ${ ({theme}) => theme.title};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+
 }
 
 .char.correct{
