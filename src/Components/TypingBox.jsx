@@ -24,13 +24,13 @@ const TypingBox = (props) => {
     const [correctWords, setCorrectWords] = useState(0);
     const [graphData, setGraphData] = useState([]);
     const [openDialog, setOpenDialog] = useState(false);
+    const [intervalId,setIntervalId] = useState(null);
     const [wordsArray, setWordsArray] = useState(()=>{
         if(gameMode ==='words'){
             return randomWords(gameWords);
         }
         return randomWords(50);
     });
-    const [intervalId,setIntervalId] = useState(null);
     const words = useMemo(()=>{
         return wordsArray;
     },[wordsArray]);
@@ -318,8 +318,9 @@ const TypingBox = (props) => {
   return (
     <div>
             <CapsLockWarning open={capsLocked}/>
+            
             <UpperMenu countDown={countDown}/>
-
+            
           {!testOver ? (<div className="type-box" onClick={focusInput}>
               <div className="words" >
 
@@ -355,6 +356,7 @@ const TypingBox = (props) => {
             onKeyUp={(e)=> handleKeyUp(e)}
             />
 
+                    
         <Dialog
             PaperProps={{
                 style: {
@@ -370,13 +372,13 @@ const TypingBox = (props) => {
         >
             <DialogTitle>
                 <div className='instruction'>
-                    press Space to redo
+                    Press Space to Redo
                 </div>
                 <div className='instruction'>
-                    press Tab/Enter to restart
+                    Press Tab/Enter to Restart
                 </div>
                 <div className='instruction'>
-                    press any other key to exit
+                    Press any other key to Exit
                 </div>
             </DialogTitle>
 

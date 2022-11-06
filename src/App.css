@@ -10,3 +10,11 @@
   justify-content: center;
   column-gap: 10px;
 }
+
+.time-mode,
+.word-mode{
+  display: flex;
+  align-items: center;
+}
+
+

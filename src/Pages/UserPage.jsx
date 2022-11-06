@@ -7,6 +7,7 @@ import { auth, db } from '../firebaseConfig';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const UserPage = () => {
 
@@ -16,11 +17,9 @@ const UserPage = () => {
   const [dataLoading, setDataLoading] = useState(true);
   const {theme} = useTheme();
   const [joinedAt, setJoinedAt] = useState();
-
+//  const navigate = useNavigate()
   const fetchUserData = () => {
-
-    if (!loading) {
-      
+    if (!loading) {     
       setJoinedAt(new Date(user.metadata.creationTime).toISOString().split('T')[0]);
       const { uid } = auth.currentUser;
       const resultRef = db.collection('results');
@@ -55,7 +54,6 @@ const UserPage = () => {
     
     <div className='canvas'>
       <Header/>
-      {/* <div className="central-data"> */}
             <div className='user-profile'>
             
               <div className="user">
@@ -67,7 +65,7 @@ const UserPage = () => {
                       {user.email}
                     </div>
                     <div className="joined-on">
-                      joined {joinedAt}
+                      Date: {joinedAt}
                     </div>
                     
                   </div>

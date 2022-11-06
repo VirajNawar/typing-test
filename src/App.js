@@ -6,6 +6,7 @@ import UserPage from './Pages/UserPage';
 import  GlobalStyles  from './Styles/Global';
 import { ThemeProvider } from "styled-components";
 import { useTheme } from './Context/ThemeContext';
+import {auth} from './firebaseConfig'
 
 
 function App() {

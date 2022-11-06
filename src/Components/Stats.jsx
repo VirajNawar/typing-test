@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import { useAlert } from '../Context/AlertContext';
 import { Tooltip } from '@mui/material';
+import '../App.css'
 
 const Stats = ({wpm, accuracy, correctChars, incorrectChars, extraChars, missedChars, graphData, reset}) => {
 

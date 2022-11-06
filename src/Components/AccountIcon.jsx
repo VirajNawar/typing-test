@@ -81,7 +81,7 @@ const AccountIcon = () => {
     }
 
     const logout = () => {
-        auth.signOut().then((okk)=>{
+        auth.signOut().then((ok)=>{
             setAlert({
                 open: true,
                 type: 'success',
@@ -99,6 +99,7 @@ const AccountIcon = () => {
 
     const handleAccountClick = () => {
         if (user) {
+
             navigate('/user');
         }
         else {
